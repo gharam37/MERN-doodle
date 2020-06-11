@@ -9,11 +9,12 @@ const port =process.env.PORT || 3001;
 // Configure app to user bodyParser
 
 //app.use(bodyParser.urlencoded({ extended: true }));
-// Register our routes in app
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors())
+// Register our routes in app
+
 app.use('/', routes);
 
 
