@@ -3,7 +3,7 @@ import * as jsonpatch from 'fast-json-patch/index.mjs';
 import { applyOperation } from 'fast-json-patch/index.mjs';
 class AppController {
   static login(req, res) {
-    //console.log(req.body)
+    console.log(req)
     const { userName, password } = req.body;
     if (!userName || !password) {
       return res.status(401).json({
