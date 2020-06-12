@@ -4,7 +4,9 @@ Playing with Nodejs, express, chai, mocha and more to develop a backend
 
 ## Lets talk top level Hierarchy
 
-**Controllers                  #Contains AppController.js with all application's main functions
+* **Controllers**                  
+Contains AppController.js with all application's main functions
+
 **Middlewares                    # Contains the resizing middleware
 **routes                     # Application routes in index.js
 ** tests                    # App.test.js where all tests live
