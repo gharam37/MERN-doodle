@@ -1,10 +1,10 @@
 # MERN-doodle
 
-This is a tiny MERN stack project that experiments with different web development concepts and
+This is a tiny MERN stack project that experiments with different web development concepts and tools
 
 ## Getting Started
 
-In each of the backend and frontend Folders there's a readme file with details . both are indepedent projects and can be run seperately  
+In each of the backend and frontend Folders there's a readme file with details . both are indepedent projects and can be run seperately. 
 
 ## Deployment
 
