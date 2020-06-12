@@ -73,6 +73,8 @@ http://localhost:3000/
 * **URL**
  http://localhost:3000/upload
 
+![alt text](https://github.com/gharam37/MERN-doodle/blob/master/thumbnail.png?raw=true)
+
 
 
 
