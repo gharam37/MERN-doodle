@@ -7,12 +7,25 @@ Playing with Nodejs, express, chai, mocha and more to develop a backend
 * **Controllers**                  
 Contains AppController.js with all application's main functions
 
-**Middlewares                    # Contains the resizing middleware
-**routes                     # Application routes in index.js
-** tests                    # App.test.js where all tests live
-**public                   #Where images are saved
-**server.js     # Where the server gets served. npm start calls this file
-**README.md     #Right here xD
+* **Middlewares**                  
+Contains the resizing middleware
+**  
+* **routes**
+Application routes in index.js
+* **tests**       
+App.test.js where all tests live
+* **public**     
+
+where uploaded images live
+
+* **server.js**  
+Where the server gets served. npm start calls this file                
+
+* **README.md**  
+Right here xD                
+
+
+
 
 ## Installation and Setup Instructions
 
