@@ -5,7 +5,7 @@ import app from "../server";
 chai.use(chaiHttp);
 chai.should();
 const fs = require("fs");
-
+//Test token
 let token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImJhciIsInBhc3N3b3JkIjoiZm9vIiwiaWF0IjoxNTkxODM4MDk1fQ.SnNZgYEY9Hkf9f-GPbZ3FhL6p8sc7R2KZ_i5Vh084rk";
 describe("App", () => {

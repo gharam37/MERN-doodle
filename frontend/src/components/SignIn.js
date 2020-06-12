@@ -1,67 +1,63 @@
-import React , {useState} from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import MaterialLink from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import { Link } from 'react-router-dom';
-import { login } from '../actions/loginActions'
-import { connect } from 'react-redux'
-
-
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright ©  '}
-      <MaterialLink color="inherit" href="https://github.com/gharam37">
-        Gharam Zakaria
-      </MaterialLink>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
+import React, { useState } from "react";
+import Avatar from "@material-ui/core/Avatar";
+import Button from "@material-ui/core/Button";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import TextField from "@material-ui/core/TextField";
+import MaterialLink from "@material-ui/core/Link";
+import Box from "@material-ui/core/Box";
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import { Link } from "react-router-dom";
+import { login } from "../actions/loginActions";
+import { connect } from "react-redux";
+//Styles for form
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   avatar: {
     margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
 }));
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {"Copyright ©  "}
+      <MaterialLink color="inherit" href="https://github.com/gharam37">
+        Gharam Zakaria
+      </MaterialLink>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
-const SignIn = ({  token, dispatch }) =>{
+
+
+const SignIn = ({ token, dispatch }) => {
   const classes = useStyles();
-  const [userName, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [userName, setUsername] = useState(null);
+  const [password, setPassword] = useState(null);
 
+  const fetchRequest = (e) => {
+    // e.preventDefault();
 
-
-  const fetchRequest =(e) => {
-   // e.preventDefault();
-
-    dispatch(login([userName,password]))
-    console.log(token)
-
-};
+    dispatch(login([userName, password]));
+    console.log(token);
+  };
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -83,7 +79,6 @@ const SignIn = ({  token, dispatch }) =>{
             name="userName"
             autoComplete="userName"
             onChange={(text) => setUsername(text.target.value)}
-
             autoFocus
           />
           <TextField
@@ -95,25 +90,23 @@ const SignIn = ({  token, dispatch }) =>{
             label="Password"
             type="password"
             id="password"
-            onChange={(text) => { setPassword(text.target.value)}}
-
+            onChange={(text) => {
+              setPassword(text.target.value);
+            }}
             autoComplete="current-password"
           />
           <Link to="/upload" className="button">
-
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            onClick={fetchRequest}
-
-                        className={classes.submit}
-          >
-            Sign In
-          </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              onClick={fetchRequest}
+              className={classes.submit}
+            >
+              Sign In
+            </Button>
           </Link>
-          
         </form>
       </div>
       <Box mt={8}>
@@ -121,10 +114,10 @@ const SignIn = ({  token, dispatch }) =>{
       </Box>
     </Container>
   );
-}
+};
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isLoggedIn: state.login.isLoggedIn,
-})
+});
 
-export default connect(mapStateToProps)(SignIn)
+export default connect(mapStateToProps)(SignIn);

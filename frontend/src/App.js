@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import SignIn from './components/SignIn.js';
 import Image from './components/Image.js';
 import "./index.css";

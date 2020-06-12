@@ -22,7 +22,6 @@ class AppController {
 
   static async thumbnail(req, res) {
     let url = req.protocol + "://" + req.get("host");
-   // console.log(req.file.fieldname)
 
     const authorizationHeader = req.headers.authorization;
     if (authorizationHeader) {
