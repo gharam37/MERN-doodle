@@ -61,7 +61,7 @@ http://localhost:3000/
 
 
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://raw.githubusercontent.com/gharam37/MERN-doodle/master/SignIn.png)
 
 
 
