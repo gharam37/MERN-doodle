@@ -12,6 +12,7 @@ import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import { login } from "../actions/loginActions";
 import { connect } from "react-redux";
+
 //Styles for form
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -45,18 +46,14 @@ function Copyright() {
   );
 }
 
-
-
 const SignIn = ({ token, dispatch }) => {
   const classes = useStyles();
-  const [userName, setUsername] = useState(null);
-  const [password, setPassword] = useState(null);
+  const [userName, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const disabled = userName == "" || password == ""; //Disable Button if Username and password aren't given
 
   const fetchRequest = (e) => {
-    // e.preventDefault();
-
-    dispatch(login([userName, password]));
-    console.log(token);
+    dispatch(login([userName, password])); //Dispatch the username and password
   };
   return (
     <Container component="main" maxWidth="xs">
@@ -102,6 +99,7 @@ const SignIn = ({ token, dispatch }) => {
               variant="contained"
               color="primary"
               onClick={fetchRequest}
+              disabled={disabled}
               className={classes.submit}
             >
               Sign In

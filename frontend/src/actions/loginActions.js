@@ -21,7 +21,6 @@ export const login = (loginInput) => { //Take username from SignIn.js
     })
       .then((response) => response.json())
       .then((json) => {
-        alert.show('Oh look, an alert!')
 
         dispatch(setLoginState({ ...json, token: json.token })); // dispatch token
       })

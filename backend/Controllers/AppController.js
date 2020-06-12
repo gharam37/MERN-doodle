@@ -62,7 +62,6 @@ class AppController {
         // verify makes sure that the token hasn't expired and has been issued by us
         const result = verify(token, "this is a secret");
 
-        console.log("result");
         // Let's pass back the decoded token to the request object
         req.decoded = result;
         // We call next to pass execution to the subsequent middleware
