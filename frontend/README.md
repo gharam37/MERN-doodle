@@ -56,7 +56,7 @@ http://localhost:3000/
 
 ### Pages
 
-**Sign in **
+**Sign in**
 ----
 
 * **URL**
