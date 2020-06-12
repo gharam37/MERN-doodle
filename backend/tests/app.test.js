@@ -86,7 +86,7 @@ describe("App", () => {
         .set("Authorization", `Bearer ${token}`)
         .send({})
         .end((err, res) => {
-          res.should.have.status(404);
+          res.should.have.status(400);
           res.body.should.be.a("object");
           //console.log(res.body)
           //res.body.should.have.property("message");
@@ -122,7 +122,7 @@ describe("App", () => {
         .set("Authorization", `Bearer ${token}`)
         .send({})
         .end((err, res) => {
-          res.should.have.status(404);
+          res.should.have.status(400);
           res.body.should.be.a("object");
           res.body.should.have.property("message");
           res.body.should.have

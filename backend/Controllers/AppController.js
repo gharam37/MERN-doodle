@@ -36,7 +36,9 @@ class AppController {
         // We call next to pass execution to the subsequent middleware
       } catch (err) {
         // Throw an error just in case anything goes wrong with verification
-        throw new Error(err);
+        return res.status(401).json({
+          error: `Invalid token provided`,
+        });
       }
     } else {
       return res.status(401).json({
@@ -47,7 +49,7 @@ class AppController {
     const imagePath = path.join(__dirname, "../public/images");
     const fileUpload = new Resize(imagePath);
     if (!req.file) {
-      return res.status(404).json({ message: "Please provide an image" });
+      return res.status(400).json({ message: "Please provide an image" });
     }
     const filename = await fileUpload.save(req.file.buffer);
     return res.status(200).json({ url: `${url}/images/${filename}` });
@@ -78,7 +80,7 @@ class AppController {
     const { document, operation } = req.body;
 
     if (!document || !operation) {
-      return res.status(404).json({
+      return res.status(400).json({
         message:
           "Mandatory params are missing! give a document and an operation ",
       });
