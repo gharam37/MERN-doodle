@@ -15,7 +15,6 @@ Application routes in index.js
 * **tests**       
 App.test.js where all tests live
 * **public**     
-
 where uploaded images live
 
 * **server.js**  

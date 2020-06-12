@@ -14,7 +14,7 @@ Might deploy the project on Heroku soon. Will update the repo accordingly
 
 ## Author
 
-* **Gharam Zakaria* - [Gharam37](https://github.com/gharam37)
+* *Gharam Zakaria* - [Gharam37](https://github.com/gharam37)
 
 
 

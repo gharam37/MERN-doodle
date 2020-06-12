@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router><Switch>
-      <Route exact path="/" component={SignIn} />
+      <Route exact path="/" component={SignIn} /> 
       <Route exact path="/upload" component={Image} />
 
       <Redirect to="/" />
